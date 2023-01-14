@@ -5,7 +5,7 @@ Reproduce multi omics machine learning methods for CompBio-Lab. Below are a list
 - Cooperative Learning
 - Single Cell MultiOmics
 
-They all have single repos, links will be added later. And they have a workflow file (GNU `make` or `snakemake`) to reproduce the metho (i.e. detailed instructions). 
+They all have single repos, links will be added later. And they have a workflow file (GNU `make` or `snakemake`) to reproduce the method (i.e. detailed instructions). 
 
 Author: Tony Liang
 
