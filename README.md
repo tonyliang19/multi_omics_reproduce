@@ -2,7 +2,7 @@
 Reproduce multi omics machine learning methods for CompBio-Lab. Below are a list of methods:
 - MOGONET
 - DIABLO
-- Cooperative Learning
+- [Cooperative Learning](/cooperative_learning/README.md)
 - Single Cell MultiOmics
 
 They all have single repos, links will be added later. And they have a workflow file (GNU `make` or `snakemake`) to reproduce the method (i.e. detailed instructions). 
