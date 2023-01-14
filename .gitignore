@@ -1,7 +1,11 @@
+# Jupyter Related
+.virtual_documents/
+.ipynb_checkpoints/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*$py.class
+*$py.cla\ss
 
 # C extensions
 *.so
