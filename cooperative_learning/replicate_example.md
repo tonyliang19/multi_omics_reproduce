@@ -6,3 +6,7 @@ This file ilustrates how to run the method step-by-step.
 `docker run --rm -p 8787:8787 -e PASSWORD="a" -v /$(pwd):/home/rstudio/test rocker/rstudio`
 
 `docker run --rm -p 8787:8787 -e PASSWORD="a" -v /$(pwd):/home/rstudio/test rocker/tidyverse`
+
+
+This is the actual command
+`docker run --rm -p 8787:8787 -e PASSWORD="a" -v /$(pwd):/home/rstudio/<FOLDER_NAME> <IMAGE_NAME>`
