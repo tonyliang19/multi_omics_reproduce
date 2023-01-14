@@ -8,6 +8,5 @@ These are some useful links:
 - [Code repo](https://github.com/dingdaisy/cooperative-learning)
 - [Paper site](https://tibshirani.su.domains/multiview/CoopLearning.html)
 - [Paper site (arXiv)](https://arxiv.org/abs/2112.12337)
-- ]\
 
 Authors: Daisy Yi Ding, Shuangning Li, Balasubramanian Narasimhan, Robert Tibshirani.
