@@ -4,5 +4,12 @@
 FROM rocker/tidyverse
 
 # Install required packages
-RUN Rscript -e "install.packages('glmnet')"
-RUN Rscript -e "install.packages('randomForest')"
+
+# This is not working
+#RUN Rscript -e "install.packages(c('glmnet', \
+#				'randomForest'))"
+
+# This works, consider update it as above
+# Or perhaps just use install.r check this out
+RUN Rscript -e "install.packages(c('glmnet','randomForest'))"
+
