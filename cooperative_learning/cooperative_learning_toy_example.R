@@ -3,7 +3,7 @@ library(caret)
 library(glmnet)
 
 # Change the FUN_PATH here
-FUN_PATH <- "cooperative_learning/cooperative_regression_function.R"
+FUN_PATH <- "cooperative_regression_function.R"
 source(FUN_PATH)
 
 
