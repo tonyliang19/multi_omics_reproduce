@@ -11,5 +11,5 @@ FROM rocker/tidyverse
 
 # This works, consider update it as above
 # Or perhaps just use install.r check this out
-RUN Rscript -e "install.packages(c('glmnet','randomForest'))"
+RUN Rscript -e "install.packages(c('glmnet','randomForest', 'caret', 'latex2xp'))"
 

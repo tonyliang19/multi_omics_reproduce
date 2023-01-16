@@ -23,6 +23,12 @@ Then run the following command to instantiate a container:
 >   The `-v /$(pwd):/home/rstudio/<FOLDER_NAME>` is required to mount volumes (so you can access local files)
 >   in the rstudio server image, and has to be mounted after /home/rstudio/ otherwise you dont have access 
 
+Them `cd` into the directory `cooperative_learing`, you should be able to find following files:
+```
+cooperative_regression_function.R
+README.md
+replicate_example.md
+```
 
 ## JupyterLab Version
 
