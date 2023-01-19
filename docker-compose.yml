@@ -1,11 +1,17 @@
 version: "3.9"
 services:
   cooperative_learning:
+    # This is more of cloud version
+    image: tonyliang19/cooperative_learning
   # This builds the cooperative learning method image
     build: ./docker/cooperative_learning
     ports:
       - "8787:8787"
+    volumes:
+      - .:/home/rstudio/cooperative_learning
+    environment:
+      PASSWORD: "a"
   # method name:
     # build: ./docker/method_name 
     # (There should be another dockerfile in <method_name dir)
-    
+
