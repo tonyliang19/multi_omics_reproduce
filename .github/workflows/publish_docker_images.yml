@@ -1,23 +1,21 @@
-name: Publish Dockerfile on DockerHub
+name: Publish multi_omics dockerfiles on DockerHub
 on: 
   push: 
-    branches:
-      - main
     paths: 
-      - 'docker/**'
+      - 'docker/cooperative_learning/Dockerfile'
+      #- 'docker/<method_name>/Dockerfile'
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v3
       with:
         fetch-depth: '0'
     - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@1.33.0
+      uses: anothrNick/github-tag-action@1.36.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
-        RELEASE_BRANCHES: main
       id: bump
     - name: Create Release
       id: create_release
@@ -29,13 +27,22 @@ jobs:
         release_name: ${{ steps.bump.outputs.new_tag }}
         body: |
           Changes in this Release
-          - Rebuilt Docker image and published to DockerHub with new tag
+          - Rebuilt cooperative learning Docker image and published to DockerHub with new tag
         draft: false
         prerelease: false
     - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v4
       with:
-        name: $ {{ secrets.DOCKER_USERNAME }}/docker_test # change this to your DockerHub username and repository
-        username: ${{ secrets.DOCKER_USERNAME }} # you need to add your Docker username to this GitHub repo as a secret
-        password: ${{ secrets.DOCKER_PASSWORD }} # you need to add your Docker password to this GitHub repo as a secret
+        name: tonyliang19/cooperative_learning
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        workdir: docker/cooperative_learning
         tags: "latest,${{ steps.bump.outputs.new_tag }}"
+    #- name: Publish to Registry
+    #  uses: elgohr/Publish-Docker-Github-Action@v4
+    #  with:
+    #    name: tonyliang19/r-stat-301-grading
+    #    username: ${{ secrets.DOCKER_USERNAME }}
+    #    password: ${{ secrets.DOCKER_PASSWORD }}
+    #    workdir: dockerfiles/r-stat-301-grading
+    #    tags: "latest,${{ steps.bump.outputs.new_tag }}"
