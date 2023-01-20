@@ -1,8 +1,8 @@
-version: "3.9"
+ version: "3.9"
 services:
   cooperative_learning:
     # This is more of cloud version
-    #image: tonyliang19/cooperative_learning
+    # image: tonyliang19/cooperative_learning
   # This builds the cooperative learning method image
     build: ./docker/cooperative_learning
     ports:
