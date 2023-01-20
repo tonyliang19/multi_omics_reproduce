@@ -11,6 +11,8 @@ FROM rocker/tidyverse
 
 # This works, consider update it as above
 # Or perhaps just use install.r check this out
+
+# This is the new ver command
 RUN Rscript -e "install.packages('glmnet')" \
 	-e "install.packages('randomForest')" \
 	-e "install.packages('caret')" \

@@ -10,7 +10,8 @@ services:
     volumes:
       - .:/home/rstudio/cooperative_learning
     environment:
-      PASSWORD: a
+      - USER: rstudio
+      - PASSWORD: a
   # method name:
     # build: ./docker/method_name 
     # (There should be another dockerfile in <method_name dir)
