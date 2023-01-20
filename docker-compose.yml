@@ -1,4 +1,4 @@
- version: "3.9"
+version: "3.9"
 services:
   cooperative_learning:
     # This is more of cloud version
@@ -10,8 +10,8 @@ services:
     volumes:
       - .:/home/rstudio/cooperative_learning
     environment:
-      - USER: rstudio
-      - PASSWORD: a
+      #- USER: "rstudio"
+      PASSWORD: a
   # method name:
     # build: ./docker/method_name 
     # (There should be another dockerfile in <method_name dir)
