@@ -17,5 +17,6 @@ RUN Rscript -e "install.packages('glmnet')" \
 	-e "install.packages('randomForest')" \
 	-e "install.packages('caret')" \
 	-e "install.packages('latex2xp')" \
-	-e "install.packages('multiview')"
+	-e "install.packages('multiview')" \
+	-e "install.packages('here')"
 #RUN Rscript -e "install.packages(c('devtools')"
